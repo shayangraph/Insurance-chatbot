@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-shabnam: 'Shabnam', 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-vazir: 'Shabnam', 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-shabnam);
+    direction: rtl;
+    background-color: #0c1322;
+    color: #dce2f7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+.font-shabnam {
+  font-family: 'Shabnam', 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+.font-vazir {
+  font-family: 'Shabnam', 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* Custom Scrollbar for Chat Interface */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0c1322;
+}
+::-webkit-scrollbar-thumb {
+  background: #2e3545;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3b494c;
+}
+
+/* Animation utilities */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.03); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s infinite ease-in-out;
+}
